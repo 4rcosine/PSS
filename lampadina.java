@@ -1,3 +1,4 @@
+//Classe della FSM
 public class FSMLampadina {
 	private FSMController ctr;
 	private FSMState st = Off.OFF
