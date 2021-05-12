@@ -3,6 +3,11 @@ public class FSMLampadina {
 	private FSMController ctr;
 	private FSMState st = Off.OFF
 	
+	//Costruttore
+	public FSMLampadina(FSMController controller) {
+		ctr = controller;
+	}
+		
 	// definizione degli eventi
 	public void accendi() {
 		st.accendi(this);
