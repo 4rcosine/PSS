@@ -1,6 +1,11 @@
 public class FSM410 {
-	public FSMController ctr;
-	public FSMState state;
+	private FSMController ctr;
+	private FSMState state = s1.S1;
+	
+	//Costruttore
+	public FSM410 (FSMController controller) {
+		ctr = controller;
+	}
 
 	//Eventi
 	public void a () {
@@ -24,50 +29,50 @@ public class FSM410 {
 		state = s;
 	}
 }
-
 //Interfaccia
 public interface FSMState {
 	public void a(FSM410: f);
 	public void b(FSM410: f);
 }
-
 //Stati
 public class s1 implements FSMState {
+	public static FSMState S1 = new s1();
 	public void a(FSM410 f) {
-		f.setstate(S4.S4);
+		f.setstate(s4.S4);
 		f.out1();
 	}
 	
 	public void b(FSM410 f) { return; }
 }
-
 public class s2 implements FSMState {
+	public static FSMState S2 = new s2();
+	
 	public void b(FSM410 f) {
-		f.setstate(S3.S3);
+		f.setstate(s3.S3);
 		f.out0();
 	}
 	
 	public void a(FSM410 f) { return; }
 }
-
 public class s3 implements FSMState {
+	
+	public static FSMState S3 = new s3();
 	public void a(FSM410 f) {
-		f.setstate(S4.S4);
+		f.setstate(s4.S4);
 		f.out1();
 	}
 	
 	public void b(FSM410 f) { return; }
 }
-
 public class s4 implements FSMState {
+	public static FSMState S4 = new s4();
 	public void a(FSM410 f) {
-		f.setstate(S2.S2);
+		f.setstate(s2.S2);
 		f.out0();
 	}
 	
-	public void a(FSM410 f) { return; }
+	public void b(FSM410 f) { return; }
 }
-
 //Controller
 public class FSMController {
 	public void out0() {
