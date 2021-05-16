@@ -45,6 +45,7 @@ public class s0 implements FSMState {
     public static FSMState S0 = new s0();
 
     public void a(FSM411 f) {
+        f.out1();
         f.setState(s1.S1);
     }
 
