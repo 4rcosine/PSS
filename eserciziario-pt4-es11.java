@@ -72,15 +72,15 @@ public class s1 implements FSMState {
 public class s2 implements FSMState {
     public static FSMState S2 = new s2();
 
-    public void a(FSM411 f) {
-        f.out0();
-    }
+    public void a(FSM411 f) { return; }
 
-    public void b(FSM411 f) { return; }
-
-    public void c(FSM411 f) {
+    public void b(FSM411 f) {
         f.out1();
         f.setState(s0.S0);
+    }
+
+    public void c(FSM411 f) {
+        f.out0();
     }
 }
 
