@@ -35,7 +35,9 @@ public interface FSMState {
 }
 
 //Stato acceso
-public class on implements FSMState {
+public class On implements FSMState {
+	public static ON = new On();
+
 	public void spegni (FSMLampadina f) {
 		f.setst(Off.OFF);
 		f.click();
@@ -47,7 +49,9 @@ public class on implements FSMState {
 }
 
 //Stato spento
-public class off implements FSMState {
+public class Off implements FSMState {
+	public static OFF = new Off();
+
 	public void accendi (FSMLampadina f) {
 		f.setst(On.ON);
 		f.click();
